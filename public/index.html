@@ -8,11 +8,97 @@
   </head>
   <body>
     <main
-      class="w-dvw h-dvh flex justify-center items-center overflow-x-hidden"
+      class="w-dvw min-h-dvh flex flex-col justify-between items-center gap-y-4 overflow-x-hidden p-8"
     >
-      <div>
-        <h1>test</h1>
-      </div>
+      <section>
+        <form
+          onsubmit="createProduct(event)"
+          class="bg-white w-[62rem] flex justify-center items-end gap-x-4 border-black border-2 p-4"
+        >
+          <div class="flex flex-col">
+            <label for="create-input-name">Name</label>
+            <input
+              id="create-input-name"
+              type="text"
+              placeholder="Enter product name"
+              required
+            />
+          </div>
+          <div class="flex flex-col">
+            <label for="create-input-price">Price</label>
+            <input
+              id="create-input-price"
+              type="number"
+              placeholder="Enter product price"
+              required
+            />
+          </div>
+          <div class="flex flex-col">
+            <label for="create-input-quantity">Quantity</label>
+            <input
+              id="create-input-quantity"
+              type="number"
+              placeholder="Enter product quantity"
+              required
+            />
+          </div>
+          <div class="flex flex-col">
+            <label for="create-input-url">Img URL</label>
+            <input
+              id="create-input-url"
+              type="url"
+              placeholder="Enter image URL"
+              required
+            />
+          </div>
+          <div>
+            <button type="submit" class="bth">Create</button>
+          </div>
+        </form>
+      </section>
+      <section
+        class="bg-white w-[62rem] flex flex-col min-h-80 border-black border-2 p-4"
+      >
+        <div class="mb-4">
+          <button type="button" onclick="selectAllProducts()" class="bth">
+            ADD ALL
+          </button>
+          <button type="button" onclick="deselectAllProducts()" class="bth">
+            Clear
+          </button>
+        </div>
+        <div id="container-cart" class="mb-4">
+          <div class="h-80 flex flex-col justify-center items-center">
+            <h1>🤔 😖 😏</h1>
+          </div>
+        </div>
+        <div class="flex items-end justify-end gap-x-2">
+          <button type="button" onclick="addToTransaction()" class="bth">
+            Add To Transaction
+          </button>
+          <button type="button" onclick="removeFromCart()" class="bth">
+            Remove From Cart
+          </button>
+        </div>
+      </section>
+      <section
+        class="bg-white w-[62rem] flex flex-col min-h-80 border-black border-2 p-4"
+      >
+        <div id="container-transaction" class="flex flex-col gap-y-4">
+          <div class="h-80 flex flex-col justify-center items-center">
+            <h1>😗</h1>
+          </div>
+        </div>
+        <div class="flex justify-end my-6">
+          <h1 id="total-amount" class="text-3xl">Total Amount: $0</h1>
+        </div>
+        <div class="flex items-end justify-end gap-x-2">
+          <button type="button" onclick="submitTransaction()" class="bth">
+            Submit
+          </button>
+        </div>
+      </section>
     </main>
   </body>
+  <script src="./script.js"></script>
 </html>

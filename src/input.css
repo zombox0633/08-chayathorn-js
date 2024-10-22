@@ -8,6 +8,39 @@
   }
 
   body {
-    @apply w-dvw min-h-dvh;
+    @apply w-dvw min-h-dvh bg-honeydew;
   }
+
+  label {
+    @apply mb-1 font-bold;
+  }
+
+  h4{
+    @apply text-xl
+  }
+
+  p{
+    @apply text-lg
+  }
+
+  input {
+    @apply border-black border-2 px-2 py-1 rounded-none;
+  }
+
+  img {
+    @apply bg-no-repeat object-cover object-center;
+  }
+
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+@layer components {
+  .bth {
+    @apply bg-black border border-black/80 py-1.5 px-4 outline-none transition-all text-center text-white font-bold;
+  }
+
 }
