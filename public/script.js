@@ -53,7 +53,7 @@ function renderCartItems() {
 
   cartProducts.forEach((item) => {
     const productFormat = `
-    <div id={product-${item.id}} data-product-id="${item.id}" class="flex gap-x-8 p-4">
+    <div id={product-${item.id}} class="flex gap-x-8 p-4">
       <input type="checkbox" data-product-id="${item.id}" />
       <div class="flex w-full border-2 border-black p-4">
         <div class="h-44 min-w-44">
@@ -122,7 +122,7 @@ function addToTransaction() {
 
       if (selectProduct && !isProductInTransaction) {
         transactionItems.push(selectProduct);
-      } else if (isProductInTransaction) {
+      } else if (isProductInTransaction && selectProduct) {
         alert(`Product "${selectProduct.name}" is already in the transaction.`);
       }
     }
