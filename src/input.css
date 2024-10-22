@@ -24,7 +24,7 @@
   }
 
   input {
-    @apply border-black border-2 px-2 py-1 rounded-none w-48;
+    @apply border-black border-2 px-2 py-1 rounded-none;
   }
 
   img {
