@@ -15,16 +15,16 @@
     @apply mb-1 font-bold;
   }
 
-  h4{
-    @apply text-xl
+  h4 {
+    @apply text-xl;
   }
 
-  p{
-    @apply text-lg
+  p {
+    @apply text-lg;
   }
 
   input {
-    @apply border-black border-2 px-2 py-1 rounded-none;
+    @apply border-black border-2 px-2 py-1 rounded-none w-48;
   }
 
   img {
@@ -42,5 +42,4 @@
   .bth {
     @apply bg-black border border-black/80 py-1.5 px-4 outline-none transition-all text-center text-white font-bold;
   }
-
 }
