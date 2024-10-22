@@ -116,8 +116,14 @@ function addToTransaction() {
         (product) => product.id === productId
       );
 
-      if (selectProduct) {
+      const isProductInTransaction = transactionItems.find(
+        (product) => product.id === productId
+      );
+
+      if (selectProduct && !isProductInTransaction) {
         transactionItems.push(selectProduct);
+      } else if (isProductInTransaction) {
+        alert(`Product "${selectProduct.name}" is already in the transaction.`);
       }
     }
   });
